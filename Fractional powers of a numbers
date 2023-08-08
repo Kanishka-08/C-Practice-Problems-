@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int num,power,a;
+    float res;
+    char ans;
+    cout<<"Do you want to enter an integral power(y/n)?"<<endl;
+    cin>>ans;
+    if(ans=='y')
+    {
+    cout<<"Please enter base and power"<<endl;
+
+    cin>>num>>power;
+
+    if(power>=0)
+    {
+    res=pow(num,power);
+    }
+    else
+    {
+        a=pow(num,power);
+        res=1/a;
+    }
+    cout<<res;
+    }
+
+    else if(ans=='n')
+    {float numerator,denominator,s;
+        cout<<"Please enter number,numerator and denominator of power respectively";
+        cin>>num>>numerator>>denominator;
+
+        if(numerator>0)
+        {
+            s= pow(num, 1.0 / denominator);
+            res=pow(s,numerator);
+            
+        }
+        if(numerator<0)
+        {
+            s= pow(num, 1.0 / denominator);
+            res=pow(s,numerator);
+            
+        }
+        cout<<res;
+    }
+}
